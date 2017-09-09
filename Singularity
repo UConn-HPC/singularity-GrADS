@@ -3,10 +3,8 @@
 # Released into the Public Domain:
 # https://creativecommons.org/publicdomain/zero/1.0/legalcode
 
-Bootstrap: yum
-OSVersion: 7
-MirrorURL: http://mirror.centos.org/centos-%{OSVERSION}/%{OSVERSION}/os/$basearch/
-Include: yum
+Bootstrap: docker
+From: centos:7
 
 %post
 # Clear any previously installed files.
